@@ -1,0 +1,16 @@
+name: Shell Commands
+
+# Define the event to trigger this worklfow.
+on: [push]
+
+jobs:
+  run-shell-code: 
+  # Define which OS this job should run on.
+   runs-on: ubuntu-latest
+   steps:
+     - name: echo a string
+       run: echo "Hello World"
+     - name: multiline script
+       run: |
+         node -v
+         npm -v

@@ -4,9 +4,12 @@ on:
   #1 push:
   #2 pull_request:
   #2  types: [closed, assigned, opened, reopened]
-  schedule:
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+  #3 schedule:
+  #3  - cron: "0/5 * * * *"
+  #3  - cron: "0/6 * * * *"
+  repository_dispatch:
+    types: [build]
+    
 
 jobs:
   run-github-actions:

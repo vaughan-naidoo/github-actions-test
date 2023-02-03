@@ -1,8 +1,9 @@
 name: Actions Worklfow
 
 on: 
-  push:
-
+  #1 push:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:

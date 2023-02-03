@@ -1,6 +1,7 @@
 name: Actions Worklfow
 
-on: [push]
+on: 
+  push:
 
 
 jobs:

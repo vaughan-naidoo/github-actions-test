@@ -1,12 +1,12 @@
 name: Actions Worklfow
 
 on: 
-  #1 push:
-  #2 pull_request:
-  #2  types: [closed, assigned, opened, reopened]
-  #3 schedule:
-  #3  - cron: "0/5 * * * *"
-  #3  - cron: "0/6 * * * *"
+  #s2-9 push:
+  #s2-9 pull_request:
+  #s2-9  types: [closed, assigned, opened, reopened]
+  #s2-10 schedule:
+  #s2-10  - cron: "0/5 * * * *"
+  #s2-11  - cron: "0/6 * * * *"
   repository_dispatch:
     types: [build]
     

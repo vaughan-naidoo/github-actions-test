@@ -9,7 +9,7 @@ on:
   #s2-10  - cron: "0/6 * * * *"
   #s2-11 repository_dispatch:
   #s2-11   types: [build]
-  push:
+  pull_request:
     branches:
       - master
 

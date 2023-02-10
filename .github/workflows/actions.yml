@@ -9,19 +9,19 @@ on:
   #s2-10  - cron: "0/6 * * * *"
   #s2-11 repository_dispatch:
   #s2-11   types: [build]
-  push:
-    branches:
-      - master
-      - "feature/*"       # matches feature/featA, feature/featB.
-                          # does not match feature/feat/A to do this the pattern would need to look like - 'feature/**'
-      - "!feature/featC"  # will not run workflow if this branch is pushed.
-    tags:
-      - v1.*  # tags-ignore Cannot be used with tags at the same time.
-    paths:
-      - "**.js"         # run this workflow only when javascript file except filename.js is pushed. 
-      - "!filename.js"
-    # paths-ignore:
-    #   - "docs/**"     # paths-ignore will ignore the pattern defined. Cannot be used with paths.
+  #s2-12push:
+  #s2-12  branches:
+  #s2-12    - master
+  #s2-12    - "feature/*"       # matches feature/featA, feature/featB.
+  #s2-12                        # does not match feature/feat/A to do this the pattern would need to look like - 'feature/**'
+  #s2-12    - "!feature/featC"  # will not run workflow if this branch is pushed.
+  #s2-12  tags:
+  #s2-12    - v1.*  # tags-ignore Cannot be used with tags at the same time.
+  #s2-12  paths:
+  #s2-12    - "**.js"         # run this workflow only when javascript file except filename.js is pushed. 
+  #s2-12    - "!filename.js"
+  #s2-12  # paths-ignore:
+  #s2-12  #   - "docs/**"     # paths-ignore will ignore the pattern defined. Cannot be used with paths.
 
 jobs:
   run-github-actions:

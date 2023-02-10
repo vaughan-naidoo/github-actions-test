@@ -12,8 +12,16 @@ on:
   push:
     branches:
       - master
-      - 'feature/*' # matches feature/featA, feature/featB
-                    # does not match feature/feat/A to do this the pattern would need to look like - 'feature/**'
+      - "feature/*"       # matches feature/featA, feature/featB.
+                          # does not match feature/feat/A to do this the pattern would need to look like - 'feature/**'
+      - "!feature/featC"  # will not run workflow if this branch is pushed.
+    tags:
+      - v1.*  # tags-ignore Cannot be used with tags at the same time.
+    paths:
+      - "**.js"         # run this workflow only when javascript file except filename.js is pushed. 
+      - "!filename.js"
+    # paths-ignore:
+    #   - "docs/**"     # paths-ignore will ignore the pattern defined. Cannot be used with paths.
 
 jobs:
   run-github-actions:

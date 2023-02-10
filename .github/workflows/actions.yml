@@ -9,9 +9,11 @@ on:
   #s2-10  - cron: "0/6 * * * *"
   #s2-11 repository_dispatch:
   #s2-11   types: [build]
-  pull_request:
+  push:
     branches:
       - master
+      - 'feature/*' # matches feature/featA, feature/featB
+                    # does not match feature/feat/A to do this the pattern would need to look like - 'feature/**'
 
 jobs:
   run-github-actions:
